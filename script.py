@@ -7,7 +7,7 @@ def read_data(file_path):
 
 def change_data_types(df):
     # Change data types and check memory usage
-    initial_memory = df.memory_usage().sum()
+    initial_memory = df.memory_usage().sum()/1024
 
     # Convert columns to appropriate data types
     df['bike_name'] = df['bike_name'].astype(str)
@@ -19,10 +19,10 @@ def change_data_types(df):
     df['power'] = df['power'].astype(float)
     df['brand'] = df['brand'].astype(str)
 
-    final_memory = df.memory_usage().sum()
+    final_memory = df.memory_usage().sum()/1024
 
-    print(f"Memory usage before: {initial_memory / (1024 ** 2):.2f} MB")
-    print(f"Memory usage after: {final_memory / (1024 ** 2):.2f} MB")
+    print(f"Memory usage before: {initial_memory:.2f} KB")
+    print(f"Memory usage after: {final_memory:.2f} KB")
 
     return df
 
