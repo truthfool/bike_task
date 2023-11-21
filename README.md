@@ -4,47 +4,47 @@
 4. Run `pip install requirements.txt`
 5. Install mysql in your system
 6. Use the below steps to create DB and user. 
-`
-To create a user, password, and database in MySQL, you can use the following SQL commands. Note that you should have appropriate privileges to create users and databases.
+        `
+        To create a user, password, and database in MySQL, you can use the following SQL commands. Note that you should have appropriate privileges to create users and databases.
 
-Login to MySQL:
+        Login to MySQL:
 
-`mysql -u root -p`
+        `mysql -u root -p`
 
-You'll be prompted to enter the root password.
+        You'll be prompted to enter the root password.
 
-Create a Database:
+        Create a Database:
 
-sql
+        sql
 
-`CREATE DATABASE your_database_name;`
+        `CREATE DATABASE your_database_name;`
 
-Replace your_database_name with the desired name for your database.
+        Replace your_database_name with the desired name for your database.
 
-Create a User:
+        Create a User:
 
-sql
+        sql
 
-`CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';`
+        `CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';`
 
-Replace your_username with the desired username and your_password with the desired password.
+        Replace your_username with the desired username and your_password with the desired password.
 
-Grant Privileges:
+        Grant Privileges:
 
-sql
+        sql
 
-`GRANT ALL PRIVILEGES ON your_database_name.* TO 'your_username'@'localhost';`
+        `GRANT ALL PRIVILEGES ON your_database_name.* TO 'your_username'@'localhost';`
 
-This grants all privileges on the specified database to the user.
+        This grants all privileges on the specified database to the user.
 
-Flush Privileges and Exit:
+        Flush Privileges and Exit:
 
-sql
+        sql
 
-`FLUSH PRIVILEGES;`
-`EXIT;`
+        `FLUSH PRIVILEGES;`
+        `EXIT;`
 
-This ensures that the changes take effect, and it exits the MySQL shell.
-`
+        This ensures that the changes take effect, and it exits the MySQL shell.
+        `
 
-7. Run the python script using `python script.py`. This will ask you the username, password and db name you create in step 
+7. Run the python script using `python script.py`. This will ask you the username, password and db name you create in step 6.
